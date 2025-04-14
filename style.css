@@ -7,67 +7,76 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
-  background-color: #000; /* Default background for body */
+  background-color: #000;
 }
 
-/* Navbar Styles */
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px 8%;
+  padding: 2px 5%; /* Reduced height by decreasing padding */
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar .logo {
-  font-size: 1.5em;
+.logo {
+  font-size: 1.0em;
   color: white;
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.navbar .nav-links {
-  list-style: none;
+/* Timer */
+.countdown-timer {
   display: flex;
+  gap: 40px; /* spacing between each number+unit block */
+  align-items: flex-end;
 }
 
-.navbar .nav-links li {
-  margin: 0 15px;
+.time-block {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  min-width: 75px; /* force stable width per block */
+  justify-content: flex-end;
 }
 
-.navbar .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 1em;
+.time-block .number {
+  font-size: 3em;
   font-weight: 400;
+  color: red;
+  line-height: 1;
+  width: 60px; /* Adjust width for stable space allocation */
+  text-align: right; /* Align the number to the right */
 }
 
-.navbar .nav-links a:hover {
-  text-decoration: underline;
+.time-block .unit {
+  font-size: 1.3em;
+  color: white;
+  padding-bottom: 4px; /* align with bottom of number */
+  margin-left: 0px; /* Adjust for better spacing */
+  line-height: 1;
 }
 
-/* Image Wrapper */
+/* Image */
 .image-wrapper {
   width: 100%;
-  margin-top: 0px; /* Push image below navbar */
 }
 
 .image-wrapper img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* Ensure no stretching, maintain aspect ratio */
-  object-position: center center; /* Keep image centered */
+  object-fit: contain;
+  object-position: center center;
 }
 
-/* Bottom Dark Blue Section */
+/* Bottom Section */
 .spacer {
   width: 100%;
   height: 720px;
@@ -85,26 +94,51 @@ footer {
   color: white;
 }
 
-/* Mobile Responsiveness */
+/* Mobile */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 5%;
   }
 
-  .navbar .logo {
-    font-size: 1.2em;
+  .logo {
+    font-size: 1.5em;
   }
 
-  .navbar .nav-links {
-    display: block;
-    text-align: center;
+  .countdown-timer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 5%;
+    margin-top: 20px;
   }
 
-  .navbar .nav-links li {
-    margin: 10px 0;
+  .time-block {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .time-block .number {
+    font-size: 2em;
+    width: auto;
+    text-align: right;
+  }
+
+  .time-block .unit {
+    font-size: 1em;
+    padding-bottom: 0;
   }
 
   .image-wrapper {
-    margin-top: 60px; /* Adjust for smaller screen */
+    overflow: hidden;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .image-wrapper img {
+    width: 160%;
+    margin-left: -30%;
+    height: auto;
+    object-fit: cover;
   }
 }
