@@ -157,24 +157,24 @@ footer {
   .navbar {
     left: 0;
     right: auto;
-    width: 100%;
-    padding: 15px 5%;
+    width: 88%;
+    padding: 10px 4%;
     justify-content: flex-start;
   }
 
   .countdown-timer {
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
     padding-left: 0;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 12px;
     justify-content: flex-start;
   }
 
   .time-block {
     flex-direction: row;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     justify-content: flex-start;
   }
@@ -188,6 +188,11 @@ footer {
   .time-block .unit {
     font-size: 1em;
     padding-bottom: 0;
+  }
+
+  .navbar3 {
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .desktop-bg {
