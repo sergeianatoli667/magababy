@@ -118,13 +118,9 @@ body {
 
 .desktop-bg {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  min-height: 100%; /* Ensures background takes full vertical height */
-  object-fit: cover; /* Ensures the background image fits without distortion */
-  object-position: center center;
+  height: auto;
+  position: relative;
 }
 
 .image-wrapper img {
