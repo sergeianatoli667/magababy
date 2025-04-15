@@ -133,20 +133,11 @@ body {
   display: block;
 }
 
-/* Spacer */
-.spacer {
-  width: 100%;
-  height: 72px;
-}
-
-.dark-blue {
-  background-color: #001f4d;
-}
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 5px;
   background-color: #333;
   color: white;
 }
