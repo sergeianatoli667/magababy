@@ -9,6 +9,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   background-color: #000;
+  height: 100%; /* Ensures full height for scrolling */
 }
 
 /* Navbar */
@@ -111,7 +112,7 @@ body {
 .image-wrapper {
   width: 100%;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -120,9 +121,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%; /* Fit horizontally */
-  object-fit: cover; /* Adjust the object-fit for better visibility */
+  width: 100%;
+  min-height: 100%; /* Ensures background takes full vertical height */
+  object-fit: cover; /* Ensures the background image fits without distortion */
+  object-position: center center;
 }
 
 .image-wrapper img {
@@ -147,7 +149,6 @@ footer {
   padding: 15px;
   background-color: #333;
   color: white;
-  z-index: 10;
 }
 
 /* Mobile */
