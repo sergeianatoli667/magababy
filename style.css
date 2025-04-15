@@ -15,7 +15,7 @@ body {
 .navbar {
   position: fixed;
   top: 38px;
-  right: 10px;
+  left: 0; /* Start from the left */
   width: 46%;
   background-color: rgba(0, 0, 0, 0);
   padding: 0 3%;
@@ -148,20 +148,25 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
-  /* Adjusting the top navbar height */
-  .navbar3 {
-    height: 20px; /* Reduced height for mobile */
-    padding: 0 3%;
+  .navbar {
+    padding: 15px 5%;
+    left: 0; /* Make it start from the left */
   }
 
-  /* Making the countdown timer horizontal */
+  .logo {
+    font-size: 1.5em;
+  }
+
   .countdown-timer {
-    flex-direction: row;  /* Change from column to row */
-    gap: 20px; /* Adjusted spacing */
-    margin-left: 0; /* Align the countdown to fit better */
+    flex-direction: row; /* Change to horizontal */
+    align-items: center;
+    gap: 20px;
+    padding-left: 5%;
+    margin-top: 20px;
   }
 
   .time-block {
+    flex-direction: row;
     gap: 10px;
     align-items: center;
   }
@@ -177,11 +182,17 @@ footer {
     padding-bottom: 0;
   }
 
-  /* Adjust the background zoom and allow vertical scrolling */
+  .image-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 60px;
+  }
+
   .image-wrapper img {
-    width: 130%; /* Zoomed background to 130% */
+    width: 130%;
+    margin-left: -15%;
     height: auto;
     object-fit: cover;
-    object-position: center top; /* Adjust the positioning */
+    content: url('background52m.jpg'); /* Use the mobile-specific background */
   }
 }
