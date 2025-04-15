@@ -189,6 +189,7 @@ footer {
   .time-block .unit {
     font-size: 1em;
     padding-bottom: 0;
+    color: white; /* Change the clock unit font color to white on mobile */
   }
 
   /* Image (Mobile) */
