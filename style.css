@@ -151,6 +151,7 @@ footer {
     right: auto;
   }
 
+
   /* Countdown Timer (Mobile) */
   .countdown-timer {
     flex-direction: row;
@@ -168,9 +169,8 @@ footer {
     min-width: 0;
   }
 
-  .time-block .number {
-    font-size: 2em;
-    width: auto;
+.time-block .number {
+    width: 60px; /* or whatever works best visually */
     text-align: right;
   }
 
