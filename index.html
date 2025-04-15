@@ -9,12 +9,7 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="countdown-timer" id="countdown">
-      <div class="time-block"><div class="number" id="days">000</div><div class="unit">DAYS</div></div>
-      <div class="time-block"><div class="number" id="hours">00</div><div class="unit">HOURS</div></div>
-      <div class="time-block"><div class="number" id="minutes">00</div><div class="unit">MIN</div></div>
-      <div class="time-block"><div class="number" id="seconds">00</div><div class="unit">SEC</div></div>
-    </div>
+    <div class="countdown-timer" id="countdown"></div>
   </nav>
 
   <nav class="navbar2">
@@ -26,8 +21,10 @@
   </div>
 
   <div class="image-wrapper">
-    <img src="background52.jpg" alt="Desktop Background" class="desktop-bg" />
-    <img src="background52m.jpg" alt="Mobile Background" class="mobile-bg" />
+    <picture>
+      <source srcset="background52m.jpg" media="(max-width: 768px)">
+      <img src="background52.jpg" alt="Full Width Background Image" class="desktop-bg"/>
+    </picture>
   </div>
 
   <div class="spacer dark-blue"></div>
