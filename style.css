@@ -11,7 +11,7 @@ body {
   background-color: #000;
 }
 
-/* Navbar */
+/* Navbar (top right clock) */
 .navbar {
   position: fixed;
   top: 38px;
@@ -25,63 +25,6 @@ body {
   align-items: center;
 }
 
-.navbar2 {
-  position: fixed;
-  top: 28px;
-  left: 0;
-  height: 100%;
-  width: 28px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.navbar2 .vertical-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  font-size: 1em;
-  color: white;
-  letter-spacing: 1px;
-  line-height: 1.8;
-  margin-top: 50px;
-}
-
-.navbar3 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 28px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0 3%;
-  z-index: 10;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.navbar3-text {
-  color: white;
-  font-size: 1.0em;
-  line-height: 28px;
-  position: absolute;
-  right: 8%;
-}
-
-/* Logo */
-.logo {
-  font-size: 1.0em;
-  color: white;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/* Countdown Timer */
 .countdown-timer {
   display: flex;
   justify-content: center;
@@ -115,17 +58,80 @@ body {
   line-height: 1;
 }
 
+/* Navbar 2 (left vertical text) */
+.navbar2 {
+  position: fixed;
+  top: 28px;
+  left: 0;
+  height: 100%;
+  width: 28px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar2 .vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  font-size: 1em;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin-top: 50px;
+}
+
+/* Navbar 3 (top text bar) */
+.navbar3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 3%;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar3-text {
+  color: white;
+  font-size: 1.0em;
+  line-height: 28px;
+  position: absolute;
+  right: 8%;
+}
+
 /* Image */
 .image-wrapper {
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  height: auto;
-  display: block;
   object-fit: contain;
-  object-position: center center;
+  object-position: center;
+}
+
+.desktop-bg {
+  display: block;
+}
+
+.mobile-bg {
+  display: none;
 }
 
 /* Spacer */
@@ -146,26 +152,31 @@ footer {
   color: white;
 }
 
-/* Mobile */
+/* Mobile styles only */
 @media (max-width: 768px) {
-  /* Navbar */
   .navbar {
-    left: 0; /* Align navbar to the left only on mobile */
+    left: 0;
+    right: auto;
+    width: 100%;
     padding: 15px 5%;
+    justify-content: flex-start;
   }
 
   .countdown-timer {
-    flex-direction: row; /* Horizontal layout for the countdown */
+    flex-direction: row;
     align-items: center;
     gap: 20px;
-    padding-left: 5%;
+    padding-left: 0;
+    margin-left: 0;
     margin-top: 20px;
+    justify-content: flex-start;
   }
 
   .time-block {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .time-block .number {
@@ -179,18 +190,15 @@ footer {
     padding-bottom: 0;
   }
 
-  /* Image */
-  .image-wrapper {
-    overflow: hidden;
-    width: 100%;
-    margin-top: 60px;
+  .desktop-bg {
+    display: none;
   }
 
-  .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the background is covered */
-    object-position: center center; /* Center the image */
-    content: url('background52m.jpg'); /* Use mobile-specific background */
+  .mobile-bg {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: 130vh;
   }
 }
