@@ -116,7 +116,8 @@ body {
   position: relative;
 }
 
-.image-wrapper img {
+.desktop-bg {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -126,12 +127,15 @@ body {
   object-position: center;
 }
 
-.desktop-bg {
-  display: block;
-}
-
 .mobile-bg {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 130vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Spacer */
@@ -157,26 +161,23 @@ footer {
   .navbar {
     left: 0;
     right: auto;
-    width: 88%;
-    padding: 10px 4%;
+    width: 90%;
+    padding: 5px 5%;
     justify-content: flex-start;
   }
 
   .countdown-timer {
     flex-direction: row;
     align-items: center;
-    gap: 18px;
-    padding-left: 0;
+    gap: 14px;
     margin-left: 0;
-    margin-top: 12px;
-    justify-content: flex-start;
+    margin-top: 8px;
   }
 
   .time-block {
     flex-direction: row;
-    gap: 8px;
+    gap: 6px;
     align-items: center;
-    justify-content: flex-start;
   }
 
   .time-block .number {
@@ -201,9 +202,5 @@ footer {
 
   .mobile-bg {
     display: block;
-    object-fit: cover;
-    object-position: center;
-    width: 100vw;
-    height: 130vh;
   }
 }
