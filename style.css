@@ -15,7 +15,7 @@ body {
 .navbar {
   position: fixed;
   top: 38px;
-  left: 0; /* Start from the left */
+  right: 10px;
   width: 46%;
   background-color: rgba(0, 0, 0, 0);
   padding: 0 3%;
@@ -148,17 +148,14 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* Navbar */
   .navbar {
+    left: 0; /* Align navbar to the left only on mobile */
     padding: 15px 5%;
-    left: 0; /* Make it start from the left */
-  }
-
-  .logo {
-    font-size: 1.5em;
   }
 
   .countdown-timer {
-    flex-direction: row; /* Change to horizontal */
+    flex-direction: row; /* Horizontal layout for the countdown */
     align-items: center;
     gap: 20px;
     padding-left: 5%;
@@ -182,6 +179,7 @@ footer {
     padding-bottom: 0;
   }
 
+  /* Image */
   .image-wrapper {
     overflow: hidden;
     width: 100%;
@@ -189,10 +187,10 @@ footer {
   }
 
   .image-wrapper img {
-    width: 130%;
-    margin-left: -15%;
-    height: auto;
-    object-fit: cover;
-    content: url('background52m.jpg'); /* Use the mobile-specific background */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the background is covered */
+    object-position: center center; /* Center the image */
+    content: url('background52m.jpg'); /* Use mobile-specific background */
   }
 }
