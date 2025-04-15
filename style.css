@@ -170,7 +170,7 @@ footer {
   }
 
 .time-block .number {
-    width: 60px; /* or whatever works best visually */
+    width: 40px; /* or whatever works best visually */
     text-align: right;
   }
 
@@ -178,6 +178,7 @@ footer {
     font-size: 1em;
     padding-bottom: 0;
     color: white; /* Change the clock unit font color to white on mobile */
+    line-height: 1;
   }
 
   /* Image (Mobile) */
