@@ -17,7 +17,7 @@ body {
   position: fixed;
   top: 38px;
   right: 10px;
-  width: 46%;
+  width: 42%;
   background-color: rgba(0, 0, 0, 0); /* Desktop: Transparent */
   padding: 0 3%;
   z-index: 10;
