@@ -8,30 +8,49 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="countdown-timer" id="countdown"></div>
-  </nav>
+  <div class="image-wrapper">
+    <img src="background52.jpg" alt="Full Width Background Image"/>
+  </div>
 
   <nav class="navbar2">
-    <div class="vertical-text">HAIL MAGA BABY</div>
+    <div class="vertical-text">Verbis Aut Re</div>
   </nav>
 
   <div class="navbar3">
-    <div class="navbar3-text">TIME LEFT FOR MAGA BABY</div>
+    <div class="navbar3-text">PP KK AAAA</div>
   </div>
 
-  <div class="image-wrapper">
-    <picture>
-      <source srcset="background52m.jpg" media="(max-width: 768px)">
-      <img src="background52.jpg" alt="Full Width Background Image" class="desktop-bg"/>
-    </picture>
-  </div>
+  <nav class="navbar4">
+    <div class="navbar4-text1">INIMLIKKUS</div>
+    <div class="navbar4-text2">PÜHENDUMUS</div>
+    <div class="navbar4-text3">ASJATUNDLIKKUS</div>
+    <div class="navbar4-text4">UUENDUSMEELSUS</div>
+  </nav>
 
-  <div class="spacer dark-blue"></div>
+  <section class="container">
+    <div class="input-group">
+      <label for="birthdate">Sünniaeg:</label>
+      <input id="birthdate" placeholder="" oninput="autoFormatDate(this)" onkeydown="handleBackspace(event, this)" onblur="formatDate(this)" inputmode="numeric" pattern="[0-9 ]*" data-next="viimane" autofocus />
+    </div>
 
-  <footer>
-    <p>HAIL MAGA BABY</p>
-  </footer>
+    <div class="input-group">
+      <label for="viimane">Viimane karistus:</label>
+      <input id="viimane" placeholder="" oninput="autoFormatDate(this)" onkeydown="handleBackspace(event, this)" onblur="formatDate(this)" inputmode="numeric" pattern="[0-9 ]*" data-next="tev" />
+    </div>
+
+    <div class="input-group">
+      <label for="tev">Tingimisi vabaks:</label>
+      <input id="tev" placeholder="" oninput="autoFormatDate(this)" onkeydown="handleBackspace(event, this)" onblur="formatDate(this)" inputmode="numeric" pattern="[0-9 ]*" data-next="esimene" />
+    </div>
+
+    <div class="input-group">
+      <label for="esimene">Esimene kokkupuude:</label>
+      <input id="esimene" placeholder="" oninput="autoFormatDate(this)" onkeydown="handleBackspace(event, this)" onblur="formatDate(this)" inputmode="numeric" pattern="[0-9 ]*" />
+    </div>
+
+    <button onclick="calculateAge()">ARVUTA</button>
+    <div id="result" class="result"></div>
+  </section>
 
   <script src="script.js"></script>
 </body>
